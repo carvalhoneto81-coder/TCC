@@ -7,7 +7,7 @@ async function checkOffline(){
  if(!('serviceWorker' in navigator)||!window.isSecureContext){status('Requer HTTPS para uso offline',false);return;}
  try{
  const reg=await navigator.serviceWorker.getRegistration();if(reg)registration=reg;
- const c=await caches.open('inspeciona-civil-ui-0.1.1');
+ const c=await caches.open('inspeciona-civil-ui-0.1.2');
  const paths=['./index.html','./mobile.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./ajuda.html'];
  const has=await Promise.all(paths.map(path=>c.match(new URL(path,location.href).href)));
  const ok=!!navigator.serviceWorker.controller&&has.every(Boolean);
