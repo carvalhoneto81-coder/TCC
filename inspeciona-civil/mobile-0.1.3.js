@@ -8,7 +8,7 @@ async function checkOffline(){
  try{
  const reg=await navigator.serviceWorker.getRegistration();if(reg)registration=reg;
  const c=await caches.open('inspeciona-civil-ui-0.1.3');
- const paths=['./index.html','./mobile.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./ajuda.html'];
+ const paths=['./index.html','./mobile-0.1.3.js','./manifest.webmanifest','./icon-192.png','./icon-512.png','./ajuda.html'];
  const has=await Promise.all(paths.map(path=>c.match(new URL(path,location.href).href)));
  const ok=!!navigator.serviceWorker.controller&&has.every(Boolean);
  status(ok?(navigator.onLine?'Pronto para usar offline':'Offline · aplicativo disponível'):'Preparando uso offline…',ok);
