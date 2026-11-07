@@ -2,7 +2,7 @@
 
 Aplicação web progressiva para registro acadêmico de inspeções visuais, baseada no instrumento preliminar do projeto de TCC.
 
-**Estado:** protótipo experimental 0.1.1. Sujeito à validação do orientador e a teste em campo. Não é ferramenta de diagnóstico estrutural, perícia ou prescrição de reparos.
+**Estado:** protótipo experimental 0.1.2. Sujeito à validação do orientador e a teste em campo. Não é ferramenta de diagnóstico estrutural, perícia ou prescrição de reparos.
 
 - [Abrir aplicativo](./inspeciona-civil/)
 - [Guia de instalação e backup](./inspeciona-civil/ajuda.html)
