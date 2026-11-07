@@ -29,5 +29,3 @@ navigator.serviceWorker?.addEventListener('controllerchange',checkOffline);
 if(installed())hint.textContent='Aplicativo aberto pelo ícone. Aguarde a confirmação de disponibilidade offline.';
 checkPersistent();checkOffline();setTimeout(checkOffline,1500);setTimeout(checkOffline,5000);
 })();
-
-[executed on device: Edvaldo_Note (78c6cc43-f17e-4c27-9cf3-b382f1aa64f2)]
