@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='inspeciona-civil-ui-0.1.1';
+const CACHE='inspeciona-civil-ui-0.1.2';
 const SCOPE=self.registration.scope;
 const PATHS=['./','./index.html','./mobile.js','./manifest.webmanifest','./icon.svg','./ajuda.html'];
 const ASSETS=PATHS.map(path=>new URL(path,SCOPE).href);
