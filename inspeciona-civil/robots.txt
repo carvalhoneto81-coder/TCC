@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: /
-
-[executed on device: Edvaldo_Note (78c6cc43-f17e-4c27-9cf3-b382f1aa64f2)]
