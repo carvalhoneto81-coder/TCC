@@ -1,7 +1,7 @@
 'use strict';
-const CACHE='inspeciona-civil-ui-0.1.2';
+const CACHE='inspeciona-civil-ui-0.1.3';
 const SCOPE=self.registration.scope;
-const PATHS=['./','./index.html','./mobile.js','./manifest.webmanifest','./icon.svg','./ajuda.html'];
+const PATHS=['./','./index.html','./mobile-0.1.3.js','./manifest.webmanifest','./icon.svg','./ajuda.html'];
 const ASSETS=PATHS.map(path=>new URL(path,SCOPE).href);
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS))));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{const keys=await caches.keys();await Promise.all(keys.filter(k=>k.startsWith('inspeciona-civil-ui-')&&k!==CACHE).map(k=>caches.delete(k)));await self.clients.claim();})()));
