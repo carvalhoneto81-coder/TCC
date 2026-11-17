@@ -2,7 +2,7 @@
 (()=>{'use strict';
 const isCount=v=>v!==''&&v!==null&&v!==undefined&&/^\d+$/.test(String(v).trim())&&Number.isSafeInteger(Number(v));
 function mode(c){
- if(['exploratory','research','pilot'].includes(c?.caseMode))return c.caseMode;
+ if(['exploratory','research','pilot','documentary'].includes(c?.caseMode))return c.caseMode;
  if(/explorat[oó]ri|n[aã]o integrar [àa] amostra/i.test(c?.name||'')||/^REGISTRO EXPLORAT[ÓO]RIO/i.test((c?.notes||'').trim()))return 'exploratory';
  return /piloto|teste do instrumento/i.test(c?.name||'')?'pilot':'research';
 }
@@ -25,3 +25,4 @@ function nextPhotoCode(c,photos){
 }
 globalThis.ICCase={isCount,mode,normalize,validateCounts,nextPhotoCode};
 })();
+
